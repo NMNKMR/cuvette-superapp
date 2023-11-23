@@ -1,0 +1,33 @@
+#account {
+    display: flex;
+
+    .left-image {
+        background-image: url('./images/account-page.png');
+        height: 100vh;
+        flex: 1 1;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        h1 {
+            position: relative;
+            top: 70%;
+            left: 10%;
+            width: 43.4375rem;
+            color: #FFF;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 0.06875rem;
+
+            span {
+                font-size: 3.4rem;
+                color: var(--dark-green);
+            }
+        }
+    }
+
+    .right-form {
+        flex: 1 1;
+    }
+}
