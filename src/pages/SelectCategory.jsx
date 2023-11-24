@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {CategoryCard} from '../components/c.index'
 import './css/SelectCategory.scss'
 
@@ -9,12 +9,52 @@ const categories = [
 ]
 
 function SelectCategory() {
+    const [selectedCategories, setSelectedCategories] = useState([]);
+    const [error, setError] = useState(false);
+
+    const addCategory = (category)=> {
+        setSelectedCategories((prev)=> [...prev, category]);
+    }
+
+    const removeCategory = (category)=> {
+        setSelectedCategories((prev)=> prev.filter((item)=> item!==category));
+    }
+
+    const handleSubmitCategory = ()=> {
+        if(selectedCategories.length >= 3) {
+            localStorage.setItem("categories", selectedCategories);
+        } else {
+            setError(true);
+        }
+    }
+
   return (
-    <div style={{display: "flex", flexWrap: "wrap"}}>
-        {categories.map((category, index)=> (
-            <CategoryCard key={index} category={category.category} bgColor={category.bgColor}/>
-        ))}
-    </div>
+      <div className='category-page'>
+          <div>
+              <div className='logo-text'>
+                  <h3>Super app</h3>
+                  <p>Choose your entertainment category</p>
+              </div>
+              <div className="selected-categories">
+                {selectedCategories.map((category, index)=> (
+                    <div key={index}>
+                        {category}
+                        <span onClick={()=> removeCategory(category)}>X</span>
+                    </div>
+                ))}
+              </div>
+              {(error && selectedCategories.length<3) && 
+              <p className='error'><img src="../src/assets/images/error.png" alt="error" width={25} height={20} />&nbsp;&nbsp;Minimum 3 categories required</p>}
+          </div>
+          <div>
+            {categories.map((category) => (
+                <CategoryCard key={category.category} category={category.category} bgColor={category.bgColor} 
+                    select={selectedCategories.includes(category.category)} handleCategory={{addCategory, removeCategory}}
+                />
+            ))}
+            <button onClick={handleSubmitCategory}>Next Page</button>
+          </div>
+      </div>
   )
 }
 

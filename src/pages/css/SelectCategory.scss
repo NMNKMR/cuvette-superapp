@@ -1,0 +1,86 @@
+.category-page{
+    box-sizing: border-box;
+    width: 100vw;
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    padding: 4% 7% 2% 7%;
+    display: flex;
+    justify-content: space-between;
+
+    > div:nth-of-type(1) {
+        width: 40%;
+        height: 100%;
+
+        .logo-text {
+            
+            h3 {
+                color: var(--logo-color);
+                font-family: "Single Day", cursive;
+                font-size: 3.14rem;
+                font-weight: 400;
+                margin: 1.5rem 0;
+            }
+
+            p {
+                margin-top: 2rem;
+                color: #FFF;
+                font-size: 3.8rem;
+                font-weight: 700;
+                line-height: 4.5rem;
+            }
+        }
+
+        .selected-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+
+            div {
+                width: 9.05rem;
+                height: 2.5rem;
+                background-color: var(--dark-green);
+                border-radius: 1.45rem;
+                color: #FFF;
+                font-size: 1.18rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                span {
+                    color: #085C00;
+                    font-size: 1.24rem;
+                    font-weight: 400;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        .error {
+            color: #F00;
+            font-size: 1.18rem;
+            font-weight: 400;
+            margin-top: 1.5rem;
+        }
+    }
+
+    > div:nth-of-type(2) {
+        width: 50%;
+        height: max-content;
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+        gap: 1.3rem;
+
+        button {
+            margin-top: 1rem;
+            width: 9.375rem;
+            height: 2.625rem;
+            border-radius: 1.83rem;
+            background-color: var(--dark-green);
+            color: #FFF;
+            font-family: "DM Sans", sans-serif;
+            font-size: 1.23rem;
+            font-weight: 500;
+        }
+    }
+}
