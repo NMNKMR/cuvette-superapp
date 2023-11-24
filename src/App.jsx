@@ -1,10 +1,14 @@
-import {Register} from './pages/p.index';
+import { Route, Routes } from 'react-router-dom';
+import {Register, SelectCategory} from './pages/p.index';
 
 function App() {
 
   return (
     <>
-      <Register/>
+      <Routes>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/category' element={<SelectCategory/>}/>
+      </Routes>
     </>
   )
 }
