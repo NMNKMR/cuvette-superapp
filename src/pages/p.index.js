@@ -1,7 +1,9 @@
 import Register from "./Register";
-import SelectCategory from "./SelectCategory";
+import Genre from "./Genre";
+import Home from "./Home";
 
 export {
     Register,
-    SelectCategory
+    Genre,
+    Home,
 }

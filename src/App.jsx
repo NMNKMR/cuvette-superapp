@@ -1,13 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
-import {Register, SelectCategory} from './pages/p.index';
+import {Register, Genre, Home} from './pages/p.index';
 
 function App() {
 
   return (
     <>
       <Routes>
+        <Route path='/' element={<Home/>} />
         <Route path='/register' element={<Register/>}/>
-        <Route path='/category' element={<SelectCategory/>}/>
+        <Route path='/category' element={<Genre/>}/>
       </Routes>
     </>
   )

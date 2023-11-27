@@ -1,0 +1,19 @@
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    main {
+        display: grid;
+        grid-template-columns: 42rem 21.75rem;
+        grid-template-rows: 26.25rem 14.6rem;
+        row-gap: 1.5rem;
+        column-gap: 4.5rem;
+
+        .news {
+            grid-row: span 2;
+        }
+    }
+}

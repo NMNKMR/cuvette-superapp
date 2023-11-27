@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {CategoryCard} from '../components/c.index'
-import './css/SelectCategory.scss'
+import './css/Genre.scss'
 
 const categories = [
     {category: "Action", bgColor: "#FF5209"}, {category: "Drama", bgColor: "#D7A4FF"}, {category: "Romance", bgColor: "#148A08"},
@@ -22,7 +22,7 @@ function SelectCategory() {
 
     const handleSubmitCategory = ()=> {
         if(selectedCategories.length >= 3) {
-            localStorage.setItem("categories", selectedCategories);
+            localStorage.setItem("categories", JSON.stringify(selectedCategories));
         } else {
             setError(true);
         }
