@@ -1,3 +1,50 @@
 .news {
-    background-color: #fff;
+    border-radius: 1rem;
+    background-color: #FFF;
+    font-family: 'Roboto', sans-serif;
+
+    .news-cover {
+        border-radius: 0.8rem 0.8rem 0 0;
+        height: 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column-reverse;
+
+        div {
+            min-height: 25%;
+            padding-left: 1rem;
+            background: rgba(0,0,0,0.74);
+            color: #FFF;
+
+            h3 {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+                letter-spacing: 0.02rem;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: 0.8rem;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    .news-content {
+        padding: 0.8rem 1rem;
+        text-align: justify;
+        
+        p {
+            color: #272727;
+            margin: 0;
+            font-size: 0.86rem;
+            line-height: 1.4rem;
+        }
+        
+        a {
+            font-size: 0.86rem;
+        }
+    }
 }

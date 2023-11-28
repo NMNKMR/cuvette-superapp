@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import envConf from '../../conf/env.config';
 import axios from 'axios'
 import '../css/Weather.scss'
+import useDate from '../../hooks/useDate';
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState(null);
+    const [dateNTime, setDateNTime] = useState({});
     const [weatherError, setWeatherError] = useState(false);
+    
+    useDate((dateNTime)=> setDateNTime(dateNTime));
     
     useEffect(()=> {
         axios.get(`https://api.weatherapi.com/v1/current.json?key=${envConf.weatherApiKey}&q=auto:ip&aqi=no`)
@@ -20,7 +24,7 @@ export default function Weather() {
 
   return (
     <div className='weather'>
-        <div className="date-time"><h3>Date</h3><h3>Time</h3></div>
+        <div className="date-time"><h3>{dateNTime.date}</h3><h3>{dateNTime.time}</h3></div>
           {!weatherError ?
               <div className="weather-data">
                   {weatherData &&
@@ -36,8 +40,8 @@ export default function Weather() {
                           </div>
                           <hr />
                           <div className='weather-extras'>
-                              <p><img src="../../src/assets/images/wind.png" alt="wind"/>{weatherData.wind_kph} km/h <br />Wind</p>
-                              <p><img src="../../src/assets/images/humidity.png" alt="humidity" />{weatherData.humidity}% <br />Humidity</p>
+                              <p><img src="../../src/assets/images/wind.png" alt="wind"/><span>{weatherData.wind_kph} km/h <br />Wind</span></p>
+                              <p><img src="../../src/assets/images/humidity.png" alt="humidity" /><span>{weatherData.humidity}% <br />Humidity</span></p>
                           </div>
                       </div>}
               </div> : <div className='weather-data'>
