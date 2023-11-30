@@ -1,12 +1,12 @@
 .weather {
     background-color: #101744;
-    border-radius: 1.56rem;
+    border-radius: 0.89rem;
     color: #FFF;
     font-family: "Roboto", sans-serif;
 
     .date-time {
-        border-radius: 1.56rem 1.56rem 0 0;
-        height: 4.54rem;
+        border-radius: 0.89rem 0.89rem 0 0;
+        height: 2.57rem;
         background-color: #FF4ADE;
         display: flex;
         align-items: center;
@@ -14,13 +14,13 @@
         justify-content: space-evenly;
 
         h3 {
-            font-size: 2.6rem;
+            font-size: 1.6rem;
         }
     }
     
     .weather-data {
         font-weight: 400;
-        font-size: 1.15rem;
+        font-size: 0.8rem;
         
         > div {
             display: flex;
@@ -29,19 +29,19 @@
             align-items: center;
 
             p {
-                margin: 1rem auto;
+                margin: 0.6rem auto;
 
                 img {
                     float: left;
-                    width: 1rem;
-                    margin-top: 7px;
-                    margin-right: 12px;
+                    width: 0.8rem;
+                    margin-top: 4px;
+                    margin-right: 7px;
                 }
             }
 
             hr {
                 position: absolute;
-                height: 4rem;
+                height: 2rem;
                 transform: rotate(0);
             }
 
@@ -50,19 +50,19 @@
             }
 
             hr:nth-of-type(2) {
-                right: 30%;
+                right: 33%;
             }
 
             .weather-condition {
                 text-align: center;
                 img {
-                    width: 6.5rem;
-                    height: 5rem;
+                    width: 3.5rem;
+                    height: 3.5rem;
                 }
 
                 p {
-                    max-width: 7rem;
-                    font-size: 1.25rem;
+                    max-width: 3.5rem;
+                    font-size: 1rem;
                     margin-top: 0;
                 }
             }
@@ -70,25 +70,21 @@
             .weather-temp {
                 text-align: center;
                 h3 {
-                    font-size: 3.7rem;
-                    margin: 1rem auto;
+                    font-size: 1.8rem;
+                    margin: 0.7rem auto;
                 }
 
-                p {
-                    img {
-                        margin-right: 0;
-                    }
-                }
             }
 
             .weather-extras {
+
                 p:nth-of-type(1) {
                     img {
                         position: relative;
                         right: 8px;
                         margin-right: 0;
-                        width: 2rem;
-                        height: 1.5rem;
+                        width: 1.3rem;
+                        height: 1rem;
                     }
                 }
             }

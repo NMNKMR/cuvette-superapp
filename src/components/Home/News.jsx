@@ -6,10 +6,8 @@ import useDate from '../../hooks/useDate';
 
 export default function News() {
     const [newsData, setNewsData] = useState({});
-    const [dateNTime, setDateNTime] = useState({});
-    
-    useDate((dateNTime)=> setDateNTime(dateNTime));
-    
+    const dateNTime =  useDate();
+
     useEffect(()=> {
         axios.get('https://newsapi.org/v2/top-headlines?sources=bbc-news', {
             headers: {

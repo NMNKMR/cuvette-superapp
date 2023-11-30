@@ -1,0 +1,43 @@
+.notes {
+    background-color: #F1C758;
+    border-radius: 0.89rem;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    padding: 1rem 0 1rem 1.5rem;
+    flex-direction: column;
+    justify-content: space-around;
+
+    label {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    textarea {
+        background-color: inherit;
+        border: none;
+        resize: none;
+        height: 90%;
+        font-size: 1rem;
+        line-height: 1.3rem;
+        width: 96%;
+    }
+
+    textarea:focus-visible {
+        outline: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0.75rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #FFE6A6;
+        border-radius: 0.77rem;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 0.77rem;
+    }
+}

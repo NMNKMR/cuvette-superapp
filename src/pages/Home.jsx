@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProfileCard, News, Weather } from '../components/c.index';
+import { ProfileCard, News, Weather, Notes, Timer } from '../components/c.index';
 import './css/Home.scss'
 
 function Home() {
@@ -7,8 +7,10 @@ function Home() {
     <div className='home-container'>
         <main>
             <ProfileCard/>
+            <Notes/>
             <News/>
             <Weather/>
+            <Timer/>
         </main>
     </div>
   )

@@ -6,10 +6,10 @@ import useDate from '../../hooks/useDate';
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState(null);
-    const [dateNTime, setDateNTime] = useState({});
     const [weatherError, setWeatherError] = useState(false);
     
-    useDate((dateNTime)=> setDateNTime(dateNTime));
+    const dateNTime =  useDate();
+    // console.log("Wheather");
     
     useEffect(()=> {
         axios.get(`https://api.weatherapi.com/v1/current.json?key=${envConf.weatherApiKey}&q=auto:ip&aqi=no`)
@@ -31,7 +31,7 @@ export default function Weather() {
                       <div>
                           <div className='weather-condition'>
                               <img src={weatherData.condition.icon} alt="weather-icon" />
-                              <p style={weatherData.condition.text.length > 15? {fontSize:"1rem"} : null}>{weatherData.condition.text}</p>
+                              <p style={weatherData.condition.text.length > 15? {fontSize:"0.65rem"} : null}>{weatherData.condition.text}</p>
                           </div>
                           <hr />
                           <div className='weather-temp'>

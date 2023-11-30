@@ -7,13 +7,21 @@
     
     main {
         display: grid;
-        grid-template-columns: 42rem 21.75rem;
-        grid-template-rows: 26.25rem 14.6rem;
+        grid-template-columns: 24.5rem 22rem 21.7rem;
+        grid-template-rows: 15rem 8.5rem 15.7rem;
         row-gap: 1.5rem;
-        column-gap: 4.5rem;
+        column-gap: 2.5rem;
 
         .news {
+            grid-row: span 3;
+        }
+        
+        .notes {
             grid-row: span 2;
+        }
+
+        .timer {
+            grid-column: span 2;
         }
     }
 }
