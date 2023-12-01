@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import {Register, Genre, Home} from './pages/p.index';
+import {Register, Genre, Home, Browse} from './pages/p.index';
 
 function App() {
 
@@ -7,6 +7,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/browse' element={<Browse/>} />
         <Route path='/register' element={<Register/>}/>
         <Route path='/category' element={<Genre/>}/>
       </Routes>
