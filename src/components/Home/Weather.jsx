@@ -2,14 +2,10 @@ import React, { useEffect, useState } from 'react'
 import envConf from '../../conf/env.config';
 import axios from 'axios'
 import '../css/Weather.scss'
-import useDate from '../../hooks/useDate';
 
-export default function Weather() {
+export default function Weather({dateNTime}) {
     const [weatherData, setWeatherData] = useState(null);
     const [weatherError, setWeatherError] = useState(false);
-    
-    const dateNTime =  useDate();
-    // console.log("Wheather");
     
     useEffect(()=> {
         axios.get(`https://api.weatherapi.com/v1/current.json?key=${envConf.weatherApiKey}&q=auto:ip&aqi=no`)

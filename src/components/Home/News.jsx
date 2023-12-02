@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react'
 import '../css/News.scss'
 import envConf from '../../conf/env.config';
 import axios from 'axios';
-import useDate from '../../hooks/useDate';
 
-export default function News() {
+export default function News({dateNTime}) {
     const [newsData, setNewsData] = useState({});
-    const dateNTime =  useDate();
 
     useEffect(()=> {
         axios.get('https://newsapi.org/v2/top-headlines?sources=bbc-news', {

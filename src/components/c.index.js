@@ -5,6 +5,8 @@ import News from "./Home/News";
 import Weather from "./Home/Weather";
 import Notes from "./Home/Notes";
 import Timer from "./Home/Timer";
+import BrowseMovies from "./Browse/BrowseMovies";
+import Poster from "./Browse/Poster";
 
 export {
     Signup,
@@ -14,4 +16,6 @@ export {
     Weather,
     Notes,
     Timer,
+    BrowseMovies,
+    Poster,
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
 import './css/Signup.scss'
 
 const inputs = [
@@ -9,6 +10,7 @@ const inputs = [
 ]
 
 function Signup() {
+  const navigate = useNavigate();
   const [inputValues, setInputValues] = useState({
     name: "",
     username: "",
@@ -58,7 +60,10 @@ function Signup() {
       }
     }
     
-    valid && localStorage.setItem('user', JSON.stringify(inputValues));
+    if(valid) {
+      localStorage.setItem('user', JSON.stringify(inputValues));
+      navigate('/category')
+    } 
   }
   
   return (

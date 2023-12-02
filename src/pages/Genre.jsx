@@ -1,16 +1,13 @@
 import React, { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
 import {CategoryCard} from '../components/c.index'
 import './css/Genre.scss'
-
-const categories = [
-    {category: "Action", bgColor: "#FF5209"}, {category: "Drama", bgColor: "#D7A4FF"}, {category: "Romance", bgColor: "#148A08"},
-    {category: "Thriller", bgColor: "#84C2FF"}, {category: "Western", bgColor: "#902500"}, {category: "Horror", bgColor: "#7358FF"},
-    {category: "Fantasy", bgColor: "#FF4ADE"}, {category: "Music", bgColor: "#E61E32"}, {category: "Fiction", bgColor: "#6CD061"},
-]
+import { categories } from '../utils/data';
 
 function SelectCategory() {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [error, setError] = useState(false);
+    const navigate = useNavigate();
 
     const addCategory = (category)=> {
         setSelectedCategories((prev)=> [...prev, category]);
@@ -23,6 +20,7 @@ function SelectCategory() {
     const handleSubmitCategory = ()=> {
         if(selectedCategories.length >= 3) {
             localStorage.setItem("categories", JSON.stringify(selectedCategories));
+            navigate('/');
         } else {
             setError(true);
         }
