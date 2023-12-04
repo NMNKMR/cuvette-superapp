@@ -76,7 +76,7 @@ function Signup() {
               <input type={input.type} name={input.name} style={inputErrors[input.name]? {border: "1px solid #F00"} : null}
                 value={inputValues[input.name]} placeholder={input.placeholder}
                 onChange={(e)=> handleInputChange(e)}/>
-              {inputErrors[input.name] && <p className='error'>{inputErrors[input.name]}</p>}
+              {inputErrors[input.name] && <p className='signup-error'>{inputErrors[input.name]}</p>}
             </div>
           ))}
           
