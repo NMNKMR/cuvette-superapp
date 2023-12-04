@@ -7,6 +7,7 @@ import Notes from "./Home/Notes";
 import Timer from "./Home/Timer";
 import BrowseMovies from "./Browse/BrowseMovies";
 import Poster from "./Browse/Poster";
+import AuthCheck from "./AuthCheck";
 
 export {
     Signup,
@@ -18,4 +19,5 @@ export {
     Timer,
     BrowseMovies,
     Poster,
+    AuthCheck,
 }

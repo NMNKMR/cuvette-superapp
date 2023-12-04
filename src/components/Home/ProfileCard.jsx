@@ -1,14 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import '../css/ProfileCard.scss'
 
 export default function ProfileCard() {
-    const [userData, setUserData] = useState({});
-    const [categories, setCategories] = useState([]);
+    const userData = JSON.parse(localStorage.getItem("user"))
+    const categories = JSON.parse(localStorage.getItem("categories"));
 
-    useEffect(()=> {
-        setUserData(JSON.parse(localStorage.getItem("user")))
-        setCategories(JSON.parse(localStorage.getItem("categories")))
-    }, [])
   return (
     <div className='profile-card'>
         <img src="../../src/assets/images/avatar.png" alt="avatar" />
