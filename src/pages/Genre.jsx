@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
 import {CategoryCard} from '../components/c.index'
+import { errorImg } from '../assets/images/images.index'
 import './css/Genre.scss'
 import { categories } from '../utils/data';
 
@@ -42,7 +43,7 @@ function SelectCategory() {
                 ))}
               </div>
               {(error && selectedCategories.length<3) && 
-              <p className='genre-error'><img src="../src/assets/images/error.png" alt="error" width={25} height={20} />&nbsp;&nbsp;Minimum 3 categories required</p>}
+              <p className='genre-error'><img src={errorImg} alt="error" width={25} height={20} />&nbsp;&nbsp;Minimum 3 categories required</p>}
           </div>
           <div>
             {categories.map(({category, bgColor, image}) => (
