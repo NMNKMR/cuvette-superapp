@@ -4,6 +4,7 @@ import './css/CategoryCard.scss'
 function CategoryCard({
     category="",
     bgColor,
+    image,
     select=false,
     handleCategory: {addCategory, removeCategory},
 }) {
@@ -14,7 +15,7 @@ function CategoryCard({
   return (
     <div className={`category-card ${select && 'selected'}`} style={{backgroundColor: bgColor}} onClick={toggleCategory}>
         <h3>{category}</h3>
-        <img src={`../src/assets/images/${category}.png`} alt={category} />
+        <img src={image} alt={category} />
     </div>
   )
 }

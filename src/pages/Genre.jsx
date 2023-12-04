@@ -45,9 +45,9 @@ function SelectCategory() {
               <p className='genre-error'><img src="../src/assets/images/error.png" alt="error" width={25} height={20} />&nbsp;&nbsp;Minimum 3 categories required</p>}
           </div>
           <div>
-            {categories.map((category) => (
-                <CategoryCard key={category.category} category={category.category} bgColor={category.bgColor} 
-                    select={selectedCategories.includes(category.category)} handleCategory={{addCategory, removeCategory}}
+            {categories.map(({category, bgColor, image}) => (
+                <CategoryCard key={category} category={category} bgColor={bgColor} image={image}
+                    select={selectedCategories.includes(category)} handleCategory={{addCategory, removeCategory}}
                 />
             ))}
             <button onClick={handleSubmitCategory}>Next Page</button>

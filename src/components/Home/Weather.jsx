@@ -1,5 +1,6 @@
 import React from 'react'
 import useWeatherInfo from '../../Queries/useWeatherInfo'
+import { pressureImg, windImg, humidityImg } from '../../assets/images/images.index';
 import '../css/Weather.scss'
 
 export default function Weather({dateNTime}) {
@@ -20,12 +21,12 @@ export default function Weather({dateNTime}) {
                               <hr />
                               <div className='weather-temp'>
                                   <h3>{weatherData.temp_c}°C</h3>
-                                  <p><img src="../../src/assets/images/pressure.png" alt="pressure" />{weatherData.pressure_mb} mbar<br />Pressure</p>
+                                  <p><img src={pressureImg} alt="pressure" />{weatherData.pressure_mb} mbar<br />Pressure</p>
                               </div>
                               <hr />
                               <div className='weather-extras'>
-                                  <p><img src="../../src/assets/images/wind.png" alt="wind" /><span>{weatherData.wind_kph} km/h <br />Wind</span></p>
-                                  <p><img src="../../src/assets/images/humidity.png" alt="humidity" /><span>{weatherData.humidity}% <br />Humidity</span></p>
+                                  <p><img src={windImg} alt="wind" /><span>{weatherData.wind_kph} km/h <br />Wind</span></p>
+                                  <p><img src={humidityImg} alt="humidity" /><span>{weatherData.humidity}% <br />Humidity</span></p>
                               </div>
                           </div>}
                   </div> : <div className='weather-data api-error'>

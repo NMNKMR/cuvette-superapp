@@ -2,13 +2,15 @@ import axios from "axios";
 import envConf from "../conf/env.config";
 import { useState, useEffect } from "react";
 
+const newsAPIURL = 'https://text-ease.vercel.app/superapp/get/news';
+
 export default function useNewsInfo() {
     const [newsData, setNewsData] = useState({});
     const [error, setError] = useState(false);
     const [laoding, setLoading] = useState(true);
     
         useEffect(()=> {
-            axios.get('/news', {
+            axios.get(newsAPIURL, {
                 headers: {
                     Authorization : envConf.newsApiKey
                 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {CountdownCircleTimer} from 'react-countdown-circle-timer'
+import { microwaveTimer } from '../../assets/images/images.index'
 import '../css/Timer.scss'
 
 const timerHands = [
@@ -49,7 +50,7 @@ export default function Timer() {
         setCountdownTime({Hours: 0, Minutes: 0, Seconds: 0})
         setStartTimer(false);
         setTimerKey((prev)=> prev+1);
-        const audio = new Audio('../../src/assets/tunes/microwave-timer.mp3');
+        const audio = new Audio(microwaveTimer);
         audio.play();
     }
 
