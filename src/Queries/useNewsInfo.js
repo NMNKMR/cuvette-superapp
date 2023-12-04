@@ -17,9 +17,7 @@ export default function useNewsInfo() {
                 if(response.data && response.data.status==="ok") {
                     const randomNews = Math.floor(Math.random() * response.data.articles.length);
                     setNewsData(response.data.articles[randomNews]);
-                } else {
-                    console.log(response);
-                    new Promise.reject()}
+                } else new Promise.reject()
             })
             .catch(()=> setError(true))
             .finally(()=> setLoading(false))
