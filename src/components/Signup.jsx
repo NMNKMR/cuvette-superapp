@@ -87,7 +87,7 @@ function Signup() {
               inputErrors[e.target.name] && setInputErrors((prev)=> ({...prev, [e.target.name]: ""}));
               }} />
           <label htmlFor="check">Share my registration data with Superapp</label>
-          {inputErrors.shareCheck && <p className='error'>{inputErrors.shareCheck}</p>}
+          {inputErrors.shareCheck && <p className='signup-error'>{inputErrors.shareCheck}</p>}
         </div>
 
           <button type="submit">SIGN UP</button>

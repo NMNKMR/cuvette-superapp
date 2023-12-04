@@ -20,7 +20,7 @@ export default function News({dateNTime}) {
                     <p>{newsData.content && newsData.content.substring(0, newsData.content.lastIndexOf("["))}</p>
                     <a href={newsData.url} target='blank'>Read More</a>
                 </div>
-            </div> : <div className='news error'>Error Occurred!</div>}
+            </div> : <div className='news api-error'>Error Occurred!</div>}
     </>
   )
 }

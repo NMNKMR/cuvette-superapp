@@ -28,7 +28,7 @@ export default function Weather({dateNTime}) {
                                   <p><img src="../../src/assets/images/humidity.png" alt="humidity" /><span>{weatherData.humidity}% <br />Humidity</span></p>
                               </div>
                           </div>}
-                  </div> : <div className='weather-data error'>
+                  </div> : <div className='weather-data api-error'>
                       Error Occured!
                   </div>
           }

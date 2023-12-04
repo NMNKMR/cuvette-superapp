@@ -42,7 +42,7 @@ function SelectCategory() {
                 ))}
               </div>
               {(error && selectedCategories.length<3) && 
-              <p className='error'><img src="../src/assets/images/error.png" alt="error" width={25} height={20} />&nbsp;&nbsp;Minimum 3 categories required</p>}
+              <p className='genre-error'><img src="../src/assets/images/error.png" alt="error" width={25} height={20} />&nbsp;&nbsp;Minimum 3 categories required</p>}
           </div>
           <div>
             {categories.map((category) => (

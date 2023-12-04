@@ -19,7 +19,7 @@ export default function BrowseMovies() {
                       </div>
                   </div>
               ))
-                  : <div style={{color: "#FFF"}} className='error'>Error Occured!</div>}
+                  : <div style={{color: "#FFF"}} className='api-error'>Error Occured!</div>}
     </div>
   )
 }
