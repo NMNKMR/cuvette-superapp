@@ -1,4 +1,5 @@
 import React from 'react'
+import AvatarImage from '../../assets/images/avatar.png'
 import '../css/ProfileCard.scss'
 
 export default function ProfileCard() {
@@ -7,7 +8,7 @@ export default function ProfileCard() {
 
   return (
     <div className='profile-card'>
-        <img src="../../src/assets/images/avatar.png" alt="avatar" />
+        <img src={AvatarImage} alt="avatar" />
         <div className='profile-info'>
             <p>{userData.name}</p>
             <p>{userData.email}</p>
